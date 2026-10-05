@@ -1,0 +1,26 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+skinparam actorStyle awesome
+
+title Диаграмма вариантов использования — Hello World Project
+
+actor "Пользователь" as User
+
+package "Система Hello World" {
+    usecase "Запуск программы" as UC_Run
+    usecase "Вывод приветствия" as UC_Hello
+    usecase "Просмотр документации" as UC_Docs
+}
+
+User --> UC_Run
+UC_Run --> UC_Hello
+User --> UC_Docs
+
+note right of UC_Hello
+  Программа выводит
+  "Hello, World!"
+  в консоль
+end note
+
+@enduml
